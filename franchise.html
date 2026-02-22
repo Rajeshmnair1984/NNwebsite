@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Franchise Opportunity - Near Nerd</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#331E48",
+                        accent: "#FFCD00",
+                        "background-light": "#F5F5F7",
+                        "background-dark": "#000000",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1d1d1f",
+                        "text-light": "#1d1d1f",
+                        "text-secondary-light": "#86868b",
+                        "text-dark": "#f5f5f7",
+                        "text-secondary-dark": "#a1a1a6",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        "2xl": "20px",
+                        "3xl": "30px",
+                    }
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">
+                        NN</div>
+                    <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="services.html">Services</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="locations.html">Find a Store</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="about.html">About Us</a>
+                    <a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary"
+                        href="franchise.html">Franchise</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="resources.html">Resources</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="faq.html">FAQ</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-text-light dark:text-text-dark hover:text-primary p-1">
+                        <span class="material-icons-outlined text-lg">search</span>
+                    </button>
+                    <a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all"
+                        href="book-repair.html">Book Repair</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-24 bg-primary text-white pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-80 text-accent"
+                style="letter-spacing: -0.02em;">Franchising</h3>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
+                style="letter-spacing: -0.02em;">Own a Technology Hub.</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Partner with the fastest-growing technology service brand. Leverage our proven business model, global
+                supply chain, and intensive training programs to build your business.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg"
+                    href="#apply">Apply Now</a>
+                <a class="bg-transparent border border-white/40 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors"
+                    href="#">Download Prospectus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Features -->
+    <section class="py-12 -mt-16 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in-up delay-100">
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">4-6 wks</div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Launch Timeline</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">From signing to grand
+                        opening, our expansion team handles real estate matching and store build-outs rapidly.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">24/7</div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Global Support</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Constant access to Level
+                        3 master technicians securely via our internal portal for complex diagnostic assistance.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">Tier 1</div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Supply Chain</h4>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Direct access to OEM and
+                        premium aftermarket parts at highly discounted bulk network pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-up delay-200">
+            <div
+                class="bg-surface-light dark:bg-surface-dark rounded-[40px] p-8 md:p-16 shadow-lg border border-gray-100 dark:border-gray-800">
+                <h2 class="text-3xl font-bold mb-2">Initial Application</h2>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark mb-10">Please fill out this
+                    preliminary form to request our Franchise Disclosure Document (FDD) and schedule an interview.</p>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">First Name</label>
+                            <input type="text"
+                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Last Name</label>
+                            <input type="text"
+                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email"
+                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone Number</label>
+                            <input type="tel"
+                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Desired Territory (City, State/Province)</label>
+                        <input type="text"
+                            class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Liquid Capital Available</label>
+                        <select
+                            class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
+                            <option>Select an option...</option>
+                            <option>$50,000 - $100,000</option>
+                            <option>$100,000 - $250,000</option>
+                            <option>$250,000 - $500,000</option>
+                            <option>$500,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="button"
+                            class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-opacity-90 transition-all shadow-md">Submit
+                            Application</button>
+                        <p class="text-center text-xs text-gray-500 mt-4">By submitting, you agree to our Privacy Policy
+                            and acknowledge this is not a binding contract.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                            NN</div>
+                        <span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
+                    </div>
+                    <p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive
+                        technology solutions.</p>
+                    <div class="flex space-x-4">
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">facebook</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">camera_alt</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">alternate_email</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Services</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Laptop &amp; Computer</a></li>
+                        <li><a class="hover:underline" href="services.html">Data Recovery</a></li>
+                        <li><a class="hover:underline" href="services.html">Business IT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Company</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="about.html">About Us</a></li>
+                        <li><a class="hover:underline" href="about.html">Careers</a></li>
+                        <li><a class="hover:underline" href="locations.html">Locations</a></li>
+                        <li><a class="hover:underline" href="contact.html">Contact</a></li>
+                        <li><a class="hover:underline" href="index.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Support</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
+                        <li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Privacy Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Terms of Service</a></li>
+                        <li><a class="hover:underline" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Newsletter</h3>
+                    <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
+                    <form class="flex gap-2">
+                        <input
+                            class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none"
+                            placeholder="Email address" type="email" />
+                        <button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>Copyright © 2025 Near Nerd. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="hover:underline" href="faq.html">Privacy Policy</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="faq.html">Terms of Use</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="#">Site Map</a>
+                </div>
+                <div class="text-[10px] text-gray-400">
+                    Canada (English)
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

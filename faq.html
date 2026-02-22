@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FAQ - Near Nerd</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#331E48",
+                        accent: "#FFCD00",
+                        "background-light": "#F5F5F7",
+                        "background-dark": "#000000",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1d1d1f",
+                        "text-light": "#1d1d1f",
+                        "text-secondary-light": "#86868b",
+                        "text-dark": "#f5f5f7",
+                        "text-secondary-dark": "#a1a1a6",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        "2xl": "20px",
+                        "3xl": "30px",
+                    }
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Simple Accordion Logic via CSS Peer Hack */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .peer:checked~.accordion-content {
+            max-height: 500px;
+        }
+
+        .peer:checked~label .icon-rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">
+                        NN</div>
+                    <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="services.html">Services</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="locations.html">Find a Store</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="about.html">About Us</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="franchise.html">Franchise</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="resources.html">Resources</a>
+                    <a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary"
+                        href="faq.html">FAQ</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-text-light dark:text-text-dark hover:text-primary p-1">
+                        <span class="material-icons-outlined text-lg">search</span>
+                    </button>
+                    <a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all"
+                        href="book-repair.html">Book Repair</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-24 bg-surface-light dark:bg-surface-dark min-h-[70vh]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" style="letter-spacing: -0.02em;">
+                    Frequently Asked Questions.</h1>
+                <p class="text-xl text-text-secondary-light dark:text-text-secondary-dark">Everything you need to know
+                    about our repair processes, warranties, and enterprise services.</p>
+            </div>
+
+            <div class="space-y-4 fade-in-up delay-100">
+                <!-- FAQ 1 -->
+                <div
+                    class="bg-background-light dark:bg-background-dark rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <input type="checkbox" id="faq1" class="peer hidden" />
+                    <label for="faq1"
+                        class="flex items-center justify-between w-full p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                        <span class="font-bold text-lg">How long does a typical smartphone screen repair take?</span>
+                        <span
+                            class="material-icons-outlined icon-rotate transition-transform duration-300">expand_more</span>
+                    </label>
+                    <div class="accordion-content bg-surface-light dark:bg-surface-dark px-6">
+                        <p class="pb-6 text-text-secondary-light dark:text-text-secondary-dark">For most popular
+                            smartphone models (Apple iPhone, Samsung Galaxy), screen replacements take between 45 to 60
+                            minutes if the part is in stock. We highly recommend booking an appointment to ensure the
+                            quickest possible turnaround time.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div
+                    class="bg-background-light dark:bg-background-dark rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <input type="checkbox" id="faq2" class="peer hidden" />
+                    <label for="faq2"
+                        class="flex items-center justify-between w-full p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                        <span class="font-bold text-lg">Do you offer a warranty on repairs?</span>
+                        <span
+                            class="material-icons-outlined icon-rotate transition-transform duration-300">expand_more</span>
+                    </label>
+                    <div class="accordion-content bg-surface-light dark:bg-surface-dark px-6">
+                        <p class="pb-6 text-text-secondary-light dark:text-text-secondary-dark">Yes, we provide an
+                            industry-leading Lifetime Limited Warranty on all standard screen replacements and a 1-year
+                            warranty on batteries and other internal components. This covers defects in parts and
+                            workmanship, but does not cover physical damage (like dropping it again) or liquid damage.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div
+                    class="bg-background-light dark:bg-background-dark rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <input type="checkbox" id="faq3" class="peer hidden" />
+                    <label for="faq3"
+                        class="flex items-center justify-between w-full p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                        <span class="font-bold text-lg">Are my photos and data safe during the repair?</span>
+                        <span
+                            class="material-icons-outlined icon-rotate transition-transform duration-300">expand_more</span>
+                    </label>
+                    <div class="accordion-content bg-surface-light dark:bg-surface-dark px-6">
+                        <p class="pb-6 text-text-secondary-light dark:text-text-secondary-dark">Customer privacy is our
+                            highest priority. We do not need access to your photos or personal data to perform hardware
+                            repairs. Our technicians operate under strict privacy protocols. However, we always
+                            recommend backing up your device to the cloud before bringing it in, just as a best
+                            practice.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div
+                    class="bg-background-light dark:bg-background-dark rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <input type="checkbox" id="faq4" class="peer hidden" />
+                    <label for="faq4"
+                        class="flex items-center justify-between w-full p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                        <span class="font-bold text-lg">Do you handle IT support for small businesses?</span>
+                        <span
+                            class="material-icons-outlined icon-rotate transition-transform duration-300">expand_more</span>
+                    </label>
+                    <div class="accordion-content bg-surface-light dark:bg-surface-dark px-6">
+                        <p class="pb-6 text-text-secondary-light dark:text-text-secondary-dark">Absolutely! Our Near
+                            Nerd B2B division handles everything from setting up cloud networks, POS systems, and
+                            cybersecurity infrastructure for businesses spanning 5 to 50 employees. Contact our
+                            Enterprise Sales team via the Contact page for a custom consultation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in-up delay-200">
+                <p class="text-text-secondary-light dark:text-text-secondary-dark mb-4">Still have questions?</p>
+                <a href="contact.html"
+                    class="inline-block bg-transparent text-primary dark:text-purple-400 font-bold hover:underline transition-all">Reach
+                    out to our support team →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                            NN</div>
+                        <span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
+                    </div>
+                    <p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive
+                        technology solutions.</p>
+                    <div class="flex space-x-4">
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">facebook</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">camera_alt</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">alternate_email</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Services</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Laptop &amp; Computer</a></li>
+                        <li><a class="hover:underline" href="services.html">Data Recovery</a></li>
+                        <li><a class="hover:underline" href="services.html">Business IT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Company</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="about.html">About Us</a></li>
+                        <li><a class="hover:underline" href="about.html">Careers</a></li>
+                        <li><a class="hover:underline" href="locations.html">Locations</a></li>
+                        <li><a class="hover:underline" href="contact.html">Contact</a></li>
+                        <li><a class="hover:underline" href="index.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Support</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
+                        <li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Privacy Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Terms of Service</a></li>
+                        <li><a class="hover:underline" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Newsletter</h3>
+                    <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
+                    <form class="flex gap-2">
+                        <input
+                            class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none"
+                            placeholder="Email address" type="email" />
+                        <button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>Copyright © 2025 Near Nerd. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="hover:underline" href="faq.html">Privacy Policy</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="faq.html">Terms of Use</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="#">Site Map</a>
+                </div>
+                <div class="text-[10px] text-gray-400">
+                    Canada (English)
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
