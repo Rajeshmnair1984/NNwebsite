@@ -1,256 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services - Near Nerd</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#331E48",
-              accent: "#FFCD00",
-              "background-light": "#F5F5F7",
-              "background-dark": "#000000",
-              "surface-light": "#FFFFFF",
-              "surface-dark": "#1d1d1f",
-              "text-light": "#1d1d1f",
-              "text-secondary-light": "#86868b",
-              "text-dark": "#f5f5f7",
-              "text-secondary-dark": "#a1a1a6",
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services - Near Nerd</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#331E48",
+                        accent: "#FFCD00",
+                        "background-light": "#F5F5F7",
+                        "background-dark": "#000000",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1d1d1f",
+                        "text-light": "#1d1d1f",
+                        "text-secondary-light": "#86868b",
+                        "text-dark": "#f5f5f7",
+                        "text-secondary-dark": "#a1a1a6",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        "2xl": "20px",
+                        "3xl": "30px",
+                    }
+                },
             },
-            fontFamily: {
-              display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              "2xl": "20px",
-              "3xl": "30px",
-            }
-          },
-        },
-      };
+        };
     </script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
-<nav class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-14">
-<a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
-<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</div>
-<span class="font-semibold text-lg tracking-tight">Near Nerd</span>
-</a>
-<div class="hidden md:flex space-x-8">
-<a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary" href="services.html">Services</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="locations.html">Find a Store</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="about.html">About Us</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="franchise.html">Franchise</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="resources.html">Resources</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="faq.html">FAQ</a>
-<a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="contact.html">Contact</a>
-</div>
-<div class="flex items-center space-x-4">
-<button class="text-text-light dark:text-text-dark hover:text-primary p-1">
-<span class="material-icons-outlined text-lg">search</span>
-</button>
-<a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all" href="book-repair.html">Book Repair</a>
-</div>
-</div>
-</div>
-</nav>
 
-<section class="py-24 bg-surface-light dark:bg-surface-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16 fade-in-up">
-<h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight" style="letter-spacing: -0.02em;">Comprehensive Tech Services.</h1>
-<p class="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto">Expert repairs, proactive IT management, and connectivity solutions tailored to both individual consumers and enterprise fleets.</p>
-</div>
-
-<div class="space-y-16">
-    <!-- Mobile Devices -->
-    <div class="flex flex-col md:flex-row gap-12 items-center fade-in-up delay-100">
-        <div class="md:w-1/2">
-             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
-                 <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply border border-primary/10 rounded-3xl"></div>
-                 <!-- Placeholder for smartphone repair image -->
-                  <div class="w-full h-full flex items-center justify-center text-gray-400">
-                     <span class="material-icons-outlined text-6xl">smartphone</span>
-                  </div>
-             </div>
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-14">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">
+                        NN</div>
+                    <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary"
+                        href="services.html">Services</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="locations.html">Find a Store</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="about.html">About Us</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="franchise.html">Franchise</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="resources.html">Resources</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="faq.html">FAQ</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-text-light dark:text-text-dark hover:text-primary p-1">
+                        <span class="material-icons-outlined text-lg">search</span>
+                    </button>
+                    <a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all"
+                        href="book-repair.html">Book Repair</a>
+                </div>
+            </div>
         </div>
-        <div class="md:w-1/2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-4" style="letter-spacing: -0.02em;">Consumer Devices</h3>
-            <h2 class="text-3xl font-bold mb-6">Smartphone &amp; Tablet Repair</h2>
-            <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
-                Bring your shattered screens, dead batteries, and water-damaged devices to our certified technicians. We offer same-day service for most models using premium grade parts.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm">
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-primary text-sm">check_circle</span> OLED &amp; LCD Screen Replacements</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Battery Health Restoration</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Logic Board Micro-Soldering</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-primary text-sm">check_circle</span> Data Recovery &amp; Transfers</li>
-            </ul>
-             <a class="bg-primary text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm inline-block" href="book-repair.html">Get Started</a>
-        </div>
-    </div>
+    </nav>
 
-    <!-- Computers & Laptops -->
-    <div class="flex flex-col md:flex-row-reverse gap-12 items-center fade-in-up delay-200">
-        <div class="md:w-1/2">
-             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
-                 <div class="absolute inset-0 bg-gradient-to-bl from-indigo-500/20 to-transparent mix-blend-multiply border border-indigo-500/10 rounded-3xl"></div>
-                  <!-- Placeholder for laptop repair image -->
-                  <div class="w-full h-full flex items-center justify-center text-gray-400">
-                     <span class="material-icons-outlined text-6xl">laptop_mac</span>
-                  </div>
-             </div>
-        </div>
-        <div class="md:w-1/2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-4" style="letter-spacing: -0.02em;">Computing</h3>
-            <h2 class="text-3xl font-bold mb-6">Laptop &amp; Desktop Service</h2>
-            <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
-                From virus removal to custom PC builds, our experts optimize your computing experience whether you run Windows or macOS.
-            </p>
-             <ul class="space-y-3 mb-8 text-sm">
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Hardware Upgrades (RAM, SSD)</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> OS Reinstall &amp; Optimization</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Virus &amp; Malware Removal</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Keyboard &amp; Display Repair</li>
-            </ul>
-             <a class="bg-primary text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm inline-block" href="book-repair.html">Get a Quote</a>
-        </div>
-    </div>
+    <section class="py-24 bg-surface-light dark:bg-surface-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight" style="letter-spacing: -0.02em;">360°
+                    Tech Solutions.</h1>
+                <p class="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-3xl mx-auto">From Bell
+                    connectivity to expert hardware repairs and managed business IT. We are your all-in-one neighborhood
+                    technology partner.</p>
+            </div>
 
-    <!-- Business IT -->
-    <div class="flex flex-col md:flex-row gap-12 items-center fade-in-up delay-300">
-        <div class="md:w-1/2">
-             <div class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
-                 <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent mix-blend-multiply border border-accent/10 rounded-3xl"></div>
-                 <!-- Placeholder for business IT image -->
-                  <div class="w-full h-full flex items-center justify-center text-gray-400">
-                     <span class="material-icons-outlined text-6xl">business</span>
-                  </div>
-             </div>
+            <div class="space-y-16">
+                <!-- Bell Connectivity -->
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center fade-in-up delay-75">
+                    <div class="md:w-1/2">
+                        <div
+                            class="aspect-video bg-blue-50 dark:bg-blue-900/10 rounded-3xl overflow-hidden shadow-lg relative border border-blue-100 dark:border-blue-800">
+                            <div class="absolute inset-0 flex items-center justify-center p-12">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bell_logo.svg/2000px-Bell_logo.svg.png"
+                                    alt="Bell Logo"
+                                    class="max-h-full opacity-80 dark:opacity-100 filter grayscale brightness-0 dark:invert">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-4"
+                            style="letter-spacing: -0.02em;">Connectivity & Mobile</h3>
+                        <h2 class="text-3xl font-bold mb-6">Bell Authorized Retailer</h2>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
+                            With over 7 years of partnership, we bring you the power of Canada's best network. Explore
+                            mobile plans, high-speed internet, and Fibe TV solutions for home and business.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-blue-600 text-sm">check_circle</span> New Device
+                                Activations & Upgrades</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-blue-600 text-sm">check_circle</span>
+                                Residential
+                                Internet & Fibe TV Plans</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-blue-600 text-sm">check_circle</span> Business
+                                Telecommunications Solutions</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-blue-600 text-sm">check_circle</span> In-Store
+                                Bill Payments & Account Support</li>
+                        </ul>
+                        <div class="flex gap-4">
+                            <a class="bg-blue-600 text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm inline-block"
+                                href="contact.html">Check Eligibility</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Devices -->
+                <div class="flex flex-col md:flex-row gap-12 items-center fade-in-up delay-100">
+                    <div class="md:w-1/2">
+                        <div
+                            class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply border border-primary/10 rounded-3xl">
+                            </div>
+                            <!-- Placeholder for smartphone repair image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                <span class="material-icons-outlined text-6xl">smartphone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-4"
+                            style="letter-spacing: -0.02em;">Consumer Devices</h3>
+                        <h2 class="text-3xl font-bold mb-6">Smartphone &amp; Tablet Repair</h2>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
+                            Bring your shattered screens, dead batteries, and water-damaged devices to our certified
+                            technicians. We offer same-day service for most models using premium grade parts.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-primary text-sm">check_circle</span> OLED &amp;
+                                LCD Screen Replacements</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-primary text-sm">check_circle</span> Battery
+                                Health Restoration</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-primary text-sm">check_circle</span> Logic Board
+                                Micro-Soldering</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-primary text-sm">check_circle</span> Data
+                                Recovery &amp; Transfers</li>
+                        </ul>
+                        <a class="bg-primary text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm inline-block"
+                            href="book-repair.html">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Computers & Laptops -->
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center fade-in-up delay-200">
+                    <div class="md:w-1/2">
+                        <div
+                            class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-bl from-indigo-500/20 to-transparent mix-blend-multiply border border-indigo-500/10 rounded-3xl">
+                            </div>
+                            <!-- Placeholder for laptop repair image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                <span class="material-icons-outlined text-6xl">laptop_mac</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-4"
+                            style="letter-spacing: -0.02em;">Computing</h3>
+                        <h2 class="text-3xl font-bold mb-6">Laptop &amp; Desktop Service</h2>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
+                            From virus removal to custom PC builds, our experts optimize your computing experience
+                            whether you run Windows or macOS.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Hardware
+                                Upgrades (RAM, SSD)</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> OS
+                                Reinstall &amp; Optimization</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Virus
+                                &amp; Malware Removal</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-indigo-500 text-sm">check_circle</span> Keyboard
+                                &amp; Display Repair</li>
+                        </ul>
+                        <a class="bg-primary text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm inline-block"
+                            href="book-repair.html">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Specialized Repair -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-up delay-250">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-icons-outlined text-3xl text-primary mb-4">sports_esports</span>
+                        <h3 class="text-xl font-bold mb-3">Gaming Console Repair</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4">HDMI port
+                            repairs, fan cleaning, and drive replacements for PS5, Xbox, and Nintendo Switch.</p>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-icons-outlined text-3xl text-indigo-500 mb-4">flight</span>
+                        <h3 class="text-xl font-bold mb-3">Drone Service</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4">Gimbal repair,
+                            obstacle sensor calibration, and shell replacements for DJI and enterprise drones.</p>
+                    </div>
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-icons-outlined text-3xl text-accent mb-4">watch</span>
+                        <h3 class="text-xl font-bold mb-3">Smart Watch Repair</h3>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4">Battery health
+                            restoration and screen repairs for Apple Watch and Samsung Galaxy Watch series.</p>
+                    </div>
+                </div>
+
+                <!-- Business IT -->
+                <div class="flex flex-col md:flex-row gap-12 items-center fade-in-up delay-300">
+                    <div class="md:w-1/2">
+                        <div
+                            class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent mix-blend-multiply border border-accent/10 rounded-3xl">
+                            </div>
+                            <!-- Placeholder for business IT image -->
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                <span class="material-icons-outlined text-6xl">business</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4"
+                            style="letter-spacing: -0.02em;">B2B Solutions</h3>
+                        <h2 class="text-3xl font-bold mb-6">Enterprise IT &amp; Networking</h2>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
+                            Scale your business with dedicated support, managed networks, and point-of-sale
+                            implementations customized for your workflow.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-accent text-sm">check_circle</span> Managed
+                                Networks & High-Security SEO</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-accent text-sm">check_circle</span> Digital
+                                Marketing & Social Media Strategy</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-accent text-sm">check_circle</span> Smart Home
+                                & Business Security Systems</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-accent text-sm">check_circle</span> Annual
+                                Maintenance Contracts (AMC)</li>
+                        </ul>
+                        <a class="text-primary dark:text-blue-400 hover:underline font-medium transition-all flex items-center gap-1 text-sm md:text-base"
+                            href="contact.html">
+                            Request Business Audit <span
+                                class="material-icons-outlined text-sm">arrow_forward_ios</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- In-Store Convenience -->
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center fade-in-up delay-350">
+                    <div class="md:w-1/2">
+                        <div
+                            class="aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent mix-blend-multiply border border-purple-500/10 rounded-3xl">
+                            </div>
+                            <div class="w-full h-full flex items-center justify-center text-gray-400">
+                                <span class="material-icons-outlined text-6xl">photo_camera</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-purple-600 mb-4"
+                            style="letter-spacing: -0.02em;">In-Store Services</h3>
+                        <h2 class="text-3xl font-bold mb-6">More Than Just Repairs</h2>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
+                            We provide essential daily tech and documentation services while you wait for your device to
+                            be ready.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-purple-600 text-sm">check_circle</span> Instant
+                                Passport & ID Photos</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-purple-600 text-sm">check_circle</span>
+                                Personalized Laser Engraving</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-purple-600 text-sm">check_circle</span>
+                                Custom-Printed Smartphone Cases</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-icons-outlined text-purple-600 text-sm">check_circle</span> Device
+                                Trade-In & Buyback Programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="md:w-1/2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4" style="letter-spacing: -0.02em;">B2B Solutions</h3>
-            <h2 class="text-3xl font-bold mb-6">Enterprise IT &amp; Networking</h2>
-            <p class="text-text-secondary-light dark:text-text-secondary-dark mb-6 leading-relaxed">
-                Scale your business with dedicated support, managed networks, and point-of-sale implementations customized for your workflow.
-            </p>
-             <ul class="space-y-3 mb-8 text-sm">
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-accent text-sm">check_circle</span> Network Setup &amp; Security</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-accent text-sm">check_circle</span> POS System Installation</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-accent text-sm">check_circle</span> Employee Device Fleet Management</li>
-                <li class="flex items-center gap-3"><span class="material-icons-outlined text-accent text-sm">check_circle</span> 24/7 Managed Helpdesk</li>
-            </ul>
-             <a class="text-primary dark:text-blue-400 hover:underline font-medium transition-all flex items-center gap-1 text-sm md:text-base" href="contact.html">
-                    Contact Enterprise Sales <span class="material-icons-outlined text-sm">arrow_forward_ios</span>
-            </a>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+            <div
+                class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full translate-x-1/3 translate-y-1/3">
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="letter-spacing: -0.02em;">Need
+                    something else?</h2>
+                <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">We offer micro-soldering, data
+                    recovery on dead devices, and drone repairs. If it has a circuit board, we can probably fix it.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                        href="contact.html">Send an Inquiry</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-</div>
-</section>
-
-<!-- Call to Action Banner -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-<div class="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
-<div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-<div class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
-<div class="relative z-10">
-<h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="letter-spacing: -0.02em;">Need something else?</h2>
-<p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">We offer micro-soldering, data recovery on dead devices, and drone repairs. If it has a circuit board, we can probably fix it.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors" href="contact.html">Send an Inquiry</a>
-</div>
-</div>
-</div>
-</section>
-
-<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-<div class="col-span-2 lg:col-span-1">
-<div class="flex items-center gap-2 mb-4">
-<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">NN</div>
-<span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
-</div>
-<p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive technology solutions.</p>
-<div class="flex space-x-4">
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">facebook</span></a>
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">camera_alt</span></a>
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">alternate_email</span></a>
-</div>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Services</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
-<li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
-<li><a class="hover:underline" href="services.html">Laptop &amp; Computer</a></li>
-<li><a class="hover:underline" href="services.html">Data Recovery</a></li>
-<li><a class="hover:underline" href="services.html">Business IT</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Company</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="about.html">About Us</a></li>
-<li><a class="hover:underline" href="about.html">Careers</a></li>
-<li><a class="hover:underline" href="locations.html">Locations</a></li>
-<li><a class="hover:underline" href="contact.html">Contact</a></li>
-<li><a class="hover:underline" href="index.html">Reviews</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Support</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
-<li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
-<li><a class="hover:underline" href="faq.html">Privacy Policy</a></li>
-<li><a class="hover:underline" href="faq.html">Terms of Service</a></li>
-<li><a class="hover:underline" href="faq.html">FAQ</a></li>
-</ul>
-</div>
-<div class="col-span-2 md:col-span-4 lg:col-span-1">
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Newsletter</h3>
-<p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
-<form class="flex gap-2">
-<input class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none" placeholder="Email address" type="email"/>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
-<span class="material-icons-outlined text-sm">arrow_forward</span>
-</button>
-</form>
-</div>
-</div>
-<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<p>Copyright © 2025 Near Nerd. All rights reserved.</p>
-<div class="flex gap-4">
-<a class="hover:underline" href="faq.html">Privacy Policy</a>
-<span class="border-l border-gray-300 dark:border-gray-700"></span>
-<a class="hover:underline" href="faq.html">Terms of Use</a>
-<span class="border-l border-gray-300 dark:border-gray-700"></span>
-<a class="hover:underline" href="#">Site Map</a>
-</div>
-<div class="text-[10px] text-gray-400">
+    <footer
+        class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">
+                            NN</div>
+                        <span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
+                    </div>
+                    <p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive
+                        technology solutions.</p>
+                    <div class="flex space-x-4">
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">facebook</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
+                                class="material-icons-outlined text-lg">camera_alt</span></a>
+                        <a class="hover:text-primary dark:hover:text-white transition-colors"
+                            href="mailto:support@nearnerd.com"><span
+                                class="material-icons-outlined text-lg">alternate_email</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Services</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
+                        <li><a class="hover:underline" href="services.html">Laptop &amp; Computer</a></li>
+                        <li><a class="hover:underline" href="services.html">Data Recovery</a></li>
+                        <li><a class="hover:underline" href="services.html">Business IT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Company</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="about.html">About Us</a></li>
+                        <li><a class="hover:underline" href="about.html">Careers</a></li>
+                        <li><a class="hover:underline" href="locations.html">Locations</a></li>
+                        <li><a class="hover:underline" href="contact.html">Contact</a></li>
+                        <li><a class="hover:underline" href="index.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Support</h3>
+                    <ul class="space-y-2">
+                        <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
+                        <li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Privacy Policy</a></li>
+                        <li><a class="hover:underline" href="faq.html">Terms of Service</a></li>
+                        <li><a class="hover:underline" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                        Newsletter</h3>
+                    <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
+                    <form class="flex gap-2">
+                        <input
+                            class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none"
+                            placeholder="Email address" type="email" />
+                        <button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
+                            <span class="material-icons-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>Copyright © 2025 Near Nerd. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a class="hover:underline" href="faq.html">Privacy Policy</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="faq.html">Terms of Use</a>
+                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
+                    <a class="hover:underline" href="#">Site Map</a>
+                </div>
+                <div class="text-[10px] text-gray-400">
                     Canada (English)
                 </div>
-</div>
-</div>
-</footer>
-</body></html>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
