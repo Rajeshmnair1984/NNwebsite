@@ -73,9 +73,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-14">
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <div
-                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">
-                        NN</div>
+                    <span
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</span>
                     <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
                 </a>
                 <div class="hidden md:flex space-x-8">
@@ -109,7 +108,7 @@
         class="py-24 bg-surface-light dark:bg-surface-dark bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" style="letter-spacing: -0.02em;">Get in
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Get in
                     Touch.</h1>
                 <p class="text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto">Our team is
                     ready to help. Reach out for support, enterprise inquiries, or general questions.</p>
@@ -182,26 +181,26 @@
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-medium mb-2">First Name</label>
-                                <input type="text"
+                                <label for="first_name" class="block text-sm font-medium mb-2">First Name</label>
+                                <input id="first_name" type="text" placeholder="John"
                                     class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                             </div>
                             <div>
-                                <label class="block text-sm font-medium mb-2">Last Name</label>
-                                <input type="text"
+                                <label for="last_name" class="block text-sm font-medium mb-2">Last Name</label>
+                                <input id="last_name" type="text" placeholder="Doe"
                                     class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium mb-2">Email Address</label>
-                            <input type="email"
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                            <input id="email" type="email" placeholder="john@example.com"
                                 class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium mb-2">Topic</label>
-                            <select
+                            <label for="topic" class="block text-sm font-medium mb-2">Topic</label>
+                            <select id="topic" title="Select a topic"
                                 class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
                                 <option>General Support or Question</option>
                                 <option>Repair Status Inquiry</option>
@@ -212,8 +211,8 @@
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium mb-2">Message</label>
-                            <textarea rows="5"
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" placeholder="How can we help?"
                                 class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all resize-none"></textarea>
                         </div>
 
@@ -251,7 +250,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Services</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
@@ -262,7 +261,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Company</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="about.html">About Us</a></li>
@@ -273,7 +272,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Support</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
@@ -284,7 +283,7 @@
                     </ul>
                 </div>
                 <div class="col-span-2 md:col-span-4 lg:col-span-1">
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Newsletter</h3>
                     <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
                     <form class="flex gap-2">

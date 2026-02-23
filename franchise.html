@@ -77,9 +77,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-14">
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <div
-                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">
-                        NN</div>
+                    <span
+                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</span>
                     <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
                 </a>
                 <div class="hidden md:flex space-x-8">
@@ -112,10 +111,10 @@
     <!-- Hero -->
     <section class="py-24 bg-primary text-white pb-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
-            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-80 text-accent"
-                style="letter-spacing: -0.02em;">Franchising</h3>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400"
-                style="letter-spacing: -0.02em;">Own a Technology Hub.</h1>
+            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-80 text-accent">Franchising</h3>
+            <h1
+                class="text-5xl md:text-7xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                Own a Technology Hub.</h1>
             <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
                 Partner with the fastest-growing technology service brand. Leverage our proven business model, global
                 supply chain, and intensive training programs to build your business.
@@ -171,39 +170,40 @@
                 <form class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium mb-2">First Name</label>
-                            <input type="text"
+                            <label for="first_name" class="block text-sm font-medium mb-2">First Name</label>
+                            <input id="first_name" type="text" placeholder="John"
                                 class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">Last Name</label>
-                            <input type="text"
+                            <label for="last_name" class="block text-sm font-medium mb-2">Last Name</label>
+                            <input id="last_name" type="text" placeholder="Doe"
                                 class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email"
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input id="email" type="email" placeholder="john@example.com"
                                 class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">Phone Number</label>
-                            <input type="tel"
+                            <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+                            <input id="phone" type="tel" placeholder="(555) 000-0000"
                                 class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium mb-2">Desired Territory (City, State/Province)</label>
-                        <input type="text"
+                        <label for="territory" class="block text-sm font-medium mb-2">Desired Territory (City,
+                            State/Province)</label>
+                        <input id="territory" type="text" placeholder="Edmonton, AB"
                             class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium mb-2">Liquid Capital Available</label>
-                        <select
+                        <label for="capital" class="block text-sm font-medium mb-2">Liquid Capital Available</label>
+                        <select id="capital" title="Select liquid capital range"
                             class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
                             <option>Select an option...</option>
                             <option>$50,000 - $100,000</option>
@@ -249,7 +249,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Services</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
@@ -260,7 +260,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Company</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="about.html">About Us</a></li>
@@ -271,7 +271,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Support</h3>
                     <ul class="space-y-2">
                         <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
@@ -282,7 +282,7 @@
                     </ul>
                 </div>
                 <div class="col-span-2 md:col-span-4 lg:col-span-1">
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">
+                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
                         Newsletter</h3>
                     <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
                     <form class="flex gap-2">

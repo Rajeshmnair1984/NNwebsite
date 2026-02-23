@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -72,13 +71,20 @@
       animation-delay: 0.3s;
     }
 
-    .hide-scroll::-webkit-scrollbar {
-      display: none;
+    @supports (scrollbar-width: none) {
+      .hide-scroll {
+        scrollbar-width: none;
+      }
     }
 
-    .hide-scroll {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    @supports not (scrollbar-width: none) {
+      .hide-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hide-scroll {
+        -ms-overflow-style: none;
+      }
     }
   </style>
 </head>
@@ -121,7 +127,7 @@
   </nav>
   <section class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 fade-in-up" style="letter-spacing: -0.02em;">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 fade-in-up tracking-tight">
         Powering Your Digital Life.<br /><span
           class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-indigo-600">The Future of
           Personal &amp; Business Technology.</span></h1>
@@ -146,7 +152,7 @@
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiitX0rQ96eFmB-2V0I65v7Cg8G6-1Fv0_Hk_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G" />
         <div class="absolute z-20 text-center text-white px-6">
           <p class="text-xs uppercase tracking-[0.3em] font-bold mb-4 opacity-70">Global Enterprise Infrastructure</p>
-          <h3 class="text-4xl md:text-6xl font-light tracking-tight" style="letter-spacing: -0.02em;">Seamless
+          <h3 class="text-4xl md:text-6xl font-light tracking-tight">Seamless
             connectivity.<br /><span class="font-bold">Everywhere.</span></h3>
         </div>
       </div>
@@ -166,50 +172,50 @@
   </div>
   <section class="py-24 bg-background-light dark:bg-background-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center" style="letter-spacing: -0.02em;">Global Services
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center tracking-tight">Global Services
         Portfolio.</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500">
-          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6"
-            style="letter-spacing: -0.02em;">Device Ecosystems</h3>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6 tracking-tight">
+            Device Ecosystems</h3>
           <p class="text-2xl font-semibold mb-4">Device Repairs &amp; Lifecycle Management</p>
           <p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Precision maintenance for personal and
             corporate device fleets across all major OS platforms.</p>
           <ul class="space-y-2 mb-8 text-sm opacity-70">
-            <li>• Screen &amp; Hardware Restoration</li>
-            <li>• Battery &amp; Power Optimization</li>
-            <li>• Multi-Device Warranty Programs</li>
+            <li>&bull; Screen &amp; Hardware Restoration</li>
+            <li>&bull; Battery &amp; Power Optimization</li>
+            <li>&bull; Multi-Device Warranty Programs</li>
           </ul><a
             class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all"
             href="#">Explore Solutions <span class="material-icons-outlined">arrow_forward</span></a>
         </div>
         <div
           class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500">
-          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6"
-            style="letter-spacing: -0.02em;">Enterprise Solutions</h3>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6 tracking-tight">
+            Enterprise Solutions</h3>
           <p class="text-2xl font-semibold mb-4">Business &amp; Digital Infrastructure</p>
           <p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Comprehensive digital transformation
             tools from POS systems to custom software architecture.</p>
           <ul class="space-y-2 mb-8 text-sm opacity-70">
-            <li>• POS &amp; Payment Architecture</li>
-            <li>• Custom Web &amp; App Development</li>
-            <li>• Business Process Automation</li>
+            <li>&bull; POS &amp; Payment Architecture</li>
+            <li>&bull; Custom Web &amp; App Development</li>
+            <li>&bull; Business Process Automation</li>
           </ul><a
             class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all"
             href="#">View Capabilities <span class="material-icons-outlined">arrow_forward</span></a>
         </div>
         <div
           class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500">
-          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6"
-            style="letter-spacing: -0.02em;">Telecom &amp; Support</h3>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6 tracking-tight">
+            Telecom &amp; Support</h3>
           <p class="text-2xl font-semibold mb-4">Connectivity &amp; Expert Support</p>
           <p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Advanced networking solutions and 24/7
             technical support for the modern connected enterprise.</p>
           <ul class="space-y-2 mb-8 text-sm opacity-70">
-            <li>• Managed Internet Services</li>
-            <li>• 24/7 Global Technical Support</li>
-            <li>• Smart Home &amp; Office Integration</li>
+            <li>&bull; Managed Internet Services</li>
+            <li>&bull; 24/7 Global Technical Support</li>
+            <li>&bull; Smart Home &amp; Office Integration</li>
           </ul><a
             class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all"
             href="#">Learn More <span class="material-icons-outlined">arrow_forward</span></a>
@@ -219,16 +225,16 @@
   </section>
   <section class="py-24 bg-surface-light dark:bg-surface-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-left" style="letter-spacing: -0.02em;">Scale with the Global
+      <h2 class="text-4xl md:text-5xl font-bold mb-16 text-left tracking-tight">Scale with the Global
         Leader.</h2>
       <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
         <div
           class="md:col-span-2 bg-primary text-white rounded-[40px] p-12 md:p-16 flex flex-col justify-center relative overflow-hidden">
           <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-l from-white to-transparent"></div>
           <div class="relative z-10 max-w-xl">
-            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-70" style="letter-spacing: -0.02em;">
+            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-70 tracking-tight">
               Franchise Opportunity</h3>
-            <h4 class="text-4xl md:text-5xl font-bold mb-8" style="letter-spacing: -0.02em;">Build Your Future with Near
+            <h4 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Build Your Future with Near
               Nerd.</h4>
             <p class="text-xl text-purple-100 mb-10 leading-relaxed">Join the world's fastest-growing technology service
               network. Proven business models, global support infrastructure, and unmatched brand equity.</p>
@@ -241,9 +247,9 @@
         </div>
         <div
           class="bg-black text-white rounded-[40px] p-12 md:p-16 flex flex-col justify-center border border-white/10">
-          <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-50" style="letter-spacing: -0.02em;">
+          <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-50 tracking-tight">
             Investing</h3>
-          <h4 class="text-3xl font-bold mb-6" style="letter-spacing: -0.02em;">Strategic Growth.</h4>
+          <h4 class="text-3xl font-bold mb-6 tracking-tight">Strategic Growth.</h4>
           <p class="text-gray-400 mb-8">Explore our investment tiers and territory availability in emerging and
             established markets worldwide.</p><a
             class="inline-flex items-center gap-2 font-bold text-purple-400 hover:text-white transition-colors"
@@ -254,7 +260,7 @@
   </section>
   <section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4" style="letter-spacing: -0.02em;">Global Services Portfolio.</h2>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Global Services Portfolio.</h2>
       <div class="flex justify-center items-center gap-2 mb-12">
         <div class="flex text-yellow-400 text-xl">
           <span class="material-icons-outlined">star</span>
@@ -322,7 +328,7 @@
         class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full translate-x-1/3 translate-y-1/3">
       </div>
       <div class="relative z-10">
-        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="letter-spacing: -0.02em;">Ready to fix your
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Ready to fix your
           device?</h2>
         <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Find a location near you or mail in your
           device today.</p>
@@ -358,7 +364,7 @@
           </div>
         </div>
         <div>
-          <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Services</h3>
+          <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tight">Services</h3>
           <ul class="space-y-2">
             <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
             <li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
@@ -368,7 +374,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Company</h3>
+          <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tight">Company</h3>
           <ul class="space-y-2">
             <li><a class="hover:underline" href="about.html">About Us</a></li>
             <li><a class="hover:underline" href="about.html">Careers</a></li>
@@ -378,7 +384,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Support</h3>
+          <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tight">Support</h3>
           <ul class="space-y-2">
             <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
             <li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
@@ -388,7 +394,7 @@
           </ul>
         </div>
         <div class="col-span-2 md:col-span-4 lg:col-span-1">
-          <h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Newsletter
+          <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tight">Newsletter
           </h3>
           <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
           <form class="flex gap-2">
@@ -427,252 +433,3 @@
 </body>
 
 </html>
-=======
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Near Nerd - Technology Simplified</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#331E48", // Dark purple from the original brand
-              accent: "#FFCD00", // Yellow accent from the original brand
-              "background-light": "#F5F5F7", // Apple-style light gray background
-              "background-dark": "#000000",
-              "surface-light": "#FFFFFF",
-              "surface-dark": "#1d1d1f",
-              "text-light": "#1d1d1f",
-              "text-secondary-light": "#86868b",
-              "text-dark": "#f5f5f7",
-              "text-secondary-dark": "#a1a1a6",
-            },
-            fontFamily: {
-              display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              "2xl": "20px",
-              "3xl": "30px",
-            },
-            spacing: {
-                '128': '32rem',
-            }
-          },
-        },
-      };
-    </script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }.hide-scroll::-webkit-scrollbar { display: none; }
-        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
-<nav class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-14">
-<div class="flex-shrink-0 flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</div>
-<span class="font-semibold text-lg tracking-tight">Near Nerd</span>
-</div>
-<div class="hidden md:flex space-x-8"><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">Services</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">Find a Store</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">About Us</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">Franchise</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">Resources</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">FAQ</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="#">Contact</a></div>
-<div class="flex items-center space-x-4">
-<button class="text-text-light dark:text-text-dark hover:text-primary p-1">
-<span class="material-icons-outlined text-lg">search</span>
-</button>
-<a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all" href="#">Book Repair</a>
-</div>
-</div>
-</div>
-</nav>
-<section class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 fade-in-up" style="letter-spacing: -0.02em;">Powering Your Digital Life.<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-indigo-600">The Future of Personal &amp; Business Technology.</span></h1>
-<p class="text-xl md:text-2xl text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto mb-10 fade-in-up delay-100">
-                Authorized repairs for the devices you rely on. From shattered screens to complex board repairs.
-            </p>
-<div class="flex justify-center gap-4 fade-in-up delay-200">
-<a class="bg-primary text-white hover:bg-opacity-90 px-6 py-3 rounded-full font-medium transition-all text-sm md:text-base" href="#">Book a Repair</a>
-<a class="text-primary dark:text-blue-400 hover:underline px-6 py-3 font-medium transition-all flex items-center gap-1 text-sm md:text-base" href="#">
-                    Get a Quote <span class="material-icons-outlined text-sm">arrow_forward_ios</span>
-</a>
-</div>
-</div>
-<div class="mt-16 mx-auto max-w-7xl px-4 fade-in-up delay-300"><div class="relative rounded-[40px] overflow-hidden shadow-2xl bg-black aspect-[21/9] flex items-center justify-center"><div class="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-indigo-900/40 z-10"></div><img alt="Abstract global connectivity visual" class="object-cover w-full h-full opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiitX0rQ96eFmB-2V0I65v7Cg8G6-1Fv0_Hk_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G_7N6m_9h_8V0G"/><div class="absolute z-20 text-center text-white px-6"><p class="text-xs uppercase tracking-[0.3em] font-bold mb-4 opacity-70">Global Enterprise Infrastructure</p><h3 class="text-4xl md:text-6xl font-light tracking-tight" style="letter-spacing: -0.02em;">Seamless connectivity.<br/><span class="font-bold">Everywhere.</span></h3></div></div></div>
-</section>
-<div class="border-y border-gray-200 dark:border-gray-800 bg-surface-light dark:bg-surface-dark py-8">
-<div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-<span class="material-icons-outlined text-4xl">apple</span>
-<span class="text-2xl font-bold font-sans">SAMSUNG</span>
-<span class="text-2xl font-bold font-serif">Google</span>
-<span class="text-2xl font-bold tracking-tight">Microsoft</span>
-<span class="text-2xl font-bold">DELL</span>
-</div>
-<p class="text-center text-xs text-text-secondary-light dark:text-text-secondary-dark mt-4">Authorized Service Provider &amp; Independent Repair Specialist</p>
-</div>
-<section class="py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-4xl md:text-5xl font-bold mb-16 text-center" style="letter-spacing: -0.02em;">Global Services Portfolio.</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500"><h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6" style="letter-spacing: -0.02em;">Device Ecosystems</h3><p class="text-2xl font-semibold mb-4">Device Repairs &amp; Lifecycle Management</p><p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Precision maintenance for personal and corporate device fleets across all major OS platforms.</p><ul class="space-y-2 mb-8 text-sm opacity-70"><li>• Screen &amp; Hardware Restoration</li><li>• Battery &amp; Power Optimization</li><li>• Multi-Device Warranty Programs</li></ul><a class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all" href="#">Explore Solutions <span class="material-icons-outlined">arrow_forward</span></a></div><div class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500"><h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6" style="letter-spacing: -0.02em;">Enterprise Solutions</h3><p class="text-2xl font-semibold mb-4">Business &amp; Digital Infrastructure</p><p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Comprehensive digital transformation tools from POS systems to custom software architecture.</p><ul class="space-y-2 mb-8 text-sm opacity-70"><li>• POS &amp; Payment Architecture</li><li>• Custom Web &amp; App Development</li><li>• Business Process Automation</li></ul><a class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all" href="#">View Capabilities <span class="material-icons-outlined">arrow_forward</span></a></div><div class="group bg-surface-light dark:bg-surface-dark p-10 rounded-[32px] border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-500"><h3 class="text-xs font-bold uppercase tracking-widest text-primary dark:text-purple-400 mb-6" style="letter-spacing: -0.02em;">Telecom &amp; Support</h3><p class="text-2xl font-semibold mb-4">Connectivity &amp; Expert Support</p><p class="text-text-secondary-light dark:text-text-secondary-dark mb-8">Advanced networking solutions and 24/7 technical support for the modern connected enterprise.</p><ul class="space-y-2 mb-8 text-sm opacity-70"><li>• Managed Internet Services</li><li>• 24/7 Global Technical Support</li><li>• Smart Home &amp; Office Integration</li></ul><a class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase group-hover:gap-4 transition-all" href="#">Learn More <span class="material-icons-outlined">arrow_forward</span></a></div></div>
-</div>
-</section>
-<section class="py-24 bg-surface-light dark:bg-surface-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-4xl md:text-5xl font-bold mb-16 text-left" style="letter-spacing: -0.02em;">Scale with the Global Leader.</h2>
-<div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min"><div class="md:col-span-2 bg-primary text-white rounded-[40px] p-12 md:p-16 flex flex-col justify-center relative overflow-hidden"><div class="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-gradient-to-l from-white to-transparent"></div><div class="relative z-10 max-w-xl"><h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-70" style="letter-spacing: -0.02em;">Franchise Opportunity</h3><h4 class="text-4xl md:text-5xl font-bold mb-8" style="letter-spacing: -0.02em;">Build Your Future with Near Nerd.</h4><p class="text-xl text-purple-100 mb-10 leading-relaxed">Join the world's fastest-growing technology service network. Proven business models, global support infrastructure, and unmatched brand equity.</p><div class="flex gap-6"><a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-opacity-90 transition-all" href="#">Apply Now</a><a class="border border-white/30 px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all" href="#">Download Prospectus</a></div></div></div><div class="bg-black text-white rounded-[40px] p-12 md:p-16 flex flex-col justify-center border border-white/10"><h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-50" style="letter-spacing: -0.02em;">Investing</h3><h4 class="text-3xl font-bold mb-6" style="letter-spacing: -0.02em;">Strategic Growth.</h4><p class="text-gray-400 mb-8">Explore our investment tiers and territory availability in emerging and established markets worldwide.</p><a class="inline-flex items-center gap-2 font-bold text-purple-400 hover:text-white transition-colors" href="#">Investor Relations <span class="material-icons-outlined">north_east</span></a></div></div>
-</div>
-</section>
-<section class="py-24 bg-background-light dark:bg-background-dark overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-4xl md:text-5xl font-bold mb-4" style="letter-spacing: -0.02em;">Global Services Portfolio.</h2>
-<div class="flex justify-center items-center gap-2 mb-12">
-<div class="flex text-yellow-400 text-xl">
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-<span class="material-icons-outlined">star</span>
-</div>
-<span class="font-medium text-text-secondary-light dark:text-text-secondary-dark">5.0 on Google</span>
-</div>
-<div class="flex overflow-x-auto gap-6 pb-8 hide-scroll snap-x snap-mandatory px-4 md:justify-center">
-<div class="min-w-[300px] md:w-[400px] bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-sm snap-center flex-shrink-0 text-left">
-<p class="text-lg italic mb-6">"I thought my phone was beyond repair after water damage, but the team had it working like new in just a few hours. Their diagnostics were spot-on."</p>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCELjMwH67iGj1rb8e4OyfnDj-T67ruOj98GZzhGiuIjPJ0GCbk0AImLoGvG5gjZfAUaJYsxMaqMzth5RNeuE98whTpNMEkc9Tq0TlX76PIrdvhOzoZ7UCzGrWd384-MfuV0HPcEvEj9oH4dV5Tlf02KKdWkfebxBap4uxSYypsqeRzGiYxeey_2sAcmcQpyv6INWOI1peWmtlIRoj6fhnqfWxvSnzkOw9j9j-oBqIVfekhIxdKNVNz6KSzZoBTkou-daZWAz-9vNts"/>
-</div>
-<div>
-<div class="font-bold">Nicolas Marko</div>
-<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Local Guide</div>
-</div>
-</div>
-</div>
-<div class="min-w-[300px] md:w-[400px] bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-sm snap-center flex-shrink-0 text-left">
-<p class="text-lg italic mb-6">"Fastest screen replacement I've ever experienced! Dropped my tablet and had it repaired same day. The new screen looks perfect."</p>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkXeggCuHAgNig48-7icEzFwXzAnf1xIPZjoWJIaTvRTtVRWDzopjUvGju-l5ugJx1_DwpK-FWlEukOA8VErHPfl9L3C9vg6zGc3txQY_KYGN4kH1sbO4k0hfp-OScyUFLmLfUeMtIJzqkWy19Wtt0GKkx9e0P6bvFetBPFvaszYFnjEpTStYjdTwTKMkvHoFZR5zdelmTghV1R-9qce9MTD-lSDtHbq7dlpl94-pSUFuLW-p2y28kq0v2qRDZGNYR_0UhPPoxkJF"/>
-</div>
-<div>
-<div class="font-bold">Jessica Smith</div>
-<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Verified Customer</div>
-</div>
-</div>
-</div>
-<div class="min-w-[300px] md:w-[400px] bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-sm snap-center flex-shrink-0 text-left">
-<p class="text-lg italic mb-6">"Honest service - they could have sold me expensive parts I didn't need, but instead fixed my charging port with a simple cleaning."</p>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
-<img alt="User" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGwP9u0FgaqeSnzZl-rZQpnblI8xazFsu_L4TyJz5KOptHXoTdm5lOLJuz9FuMsZgFTLs7M0TchOs_CH4QoometZsPIg4CngGJAA-UN6jo3OysohobMIrcrSkt-BuIJiFTGlSQIDTEaxYe0-iJnZ2eACqyrDGkLruReZrhSL33R65RMQqZA9tayWJJQT6dNC8GuXKwpMqBqzB6cPE0TogLPt0MHG5AfYQ7mF3RCh57Djsv9pDV-IbVqqIoeS4A-k16r4KRyQ4hbfBs"/>
-</div>
-<div>
-<div class="font-bold">David Paul</div>
-<div class="text-xs text-text-secondary-light dark:text-text-secondary-dark">Business Owner</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-<div class="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
-<div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-<div class="absolute bottom-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
-<div class="relative z-10">
-<h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="letter-spacing: -0.02em;">Ready to fix your device?</h2>
-<p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Find a location near you or mail in your device today.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors" href="#">Find a Location</a>
-<a class="bg-transparent border border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors" href="#">Contact Support</a>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-<div class="col-span-2 lg:col-span-1">
-<div class="flex items-center gap-2 mb-4">
-<div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">NN</div>
-<span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
-</div>
-<p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive technology solutions.</p>
-<div class="flex space-x-4">
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">facebook</span></a>
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">camera_alt</span></a>
-<a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span class="material-icons-outlined text-lg">alternate_email</span></a>
-</div>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Services</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="#">Smartphone Repair</a></li>
-<li><a class="hover:underline" href="#">Tablet Repair</a></li>
-<li><a class="hover:underline" href="#">Laptop &amp; Computer</a></li>
-<li><a class="hover:underline" href="#">Data Recovery</a></li>
-<li><a class="hover:underline" href="#">Business IT</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Company</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="#">About Us</a></li>
-<li><a class="hover:underline" href="#">Careers</a></li>
-<li><a class="hover:underline" href="#">Locations</a></li>
-<li><a class="hover:underline" href="#">Contact</a></li>
-<li><a class="hover:underline" href="#">Reviews</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Support</h3>
-<ul class="space-y-2">
-<li><a class="hover:underline" href="#">Check Repair Status</a></li>
-<li><a class="hover:underline" href="#">Warranty Policy</a></li>
-<li><a class="hover:underline" href="#">Privacy Policy</a></li>
-<li><a class="hover:underline" href="#">Terms of Service</a></li>
-<li><a class="hover:underline" href="#">FAQ</a></li>
-</ul>
-</div>
-<div class="col-span-2 md:col-span-4 lg:col-span-1">
-<h3 class="font-semibold text-text-light dark:text-white mb-3" style="letter-spacing: -0.02em;">Newsletter</h3>
-<p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
-<form class="flex gap-2">
-<input class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none" placeholder="Email address" type="email"/>
-<button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
-<span class="material-icons-outlined text-sm">arrow_forward</span>
-</button>
-</form>
-</div>
-</div>
-<div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<p>Copyright © 2025 Near Nerd. All rights reserved.</p>
-<div class="flex gap-4">
-<a class="hover:underline" href="#">Privacy Policy</a>
-<span class="border-l border-gray-300 dark:border-gray-700"></span>
-<a class="hover:underline" href="#">Terms of Use</a>
-<span class="border-l border-gray-300 dark:border-gray-700"></span>
-<a class="hover:underline" href="#">Site Map</a>
-</div>
-<div class="text-[10px] text-gray-400">
-                    Canada (English)
-                </div>
-</div>
-<div class="mt-8 text-[10px] text-gray-400 leading-relaxed">
-                1. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit. <br/>
-                2. Data recovery success rates vary depending on the extent of damage. Evaluation fee may apply if data cannot be recovered, though initial diagnostics are free.
-            </div>
-</div>
-</footer>
-</body></html>
->>>>>>> 40f0144234620d02c012a8a3182d9f49b00e8218
