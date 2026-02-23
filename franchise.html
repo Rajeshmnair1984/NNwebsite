@@ -2,314 +2,352 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Franchise Opportunity - Near Nerd</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#331E48",
-                        accent: "#FFCD00",
-                        "background-light": "#F5F5F7",
-                        "background-dark": "#000000",
-                        "surface-light": "#FFFFFF",
-                        "surface-dark": "#1d1d1f",
-                        "text-light": "#1d1d1f",
-                        "text-secondary-light": "#86868b",
-                        "text-dark": "#f5f5f7",
-                        "text-secondary-dark": "#a1a1a6",
-                    },
-                    fontFamily: {
-                        display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "12px",
-                        "2xl": "20px",
-                        "3xl": "30px",
-                    }
-                },
-            },
-        };
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .delay-100 {
-            animation-delay: 0.1s;
-        }
-
-        .delay-200 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-300 {
-            animation-delay: 0.3s;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="Own a Near Nerd franchise — Canada's fastest-growing tech service brand. Proven model, full training, and national marketing support. Apply today." />
+  <title>Franchise Opportunity - Near Nerd</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#331E48",
+            accent: "#FFCD00",
+            "background-light": "#F5F5F7",
+            "background-dark": "#000000",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#1d1d1f",
+            "text-light": "#1d1d1f",
+            "text-secondary-light": "#86868b",
+            "text-dark": "#f5f5f7",
+            "text-secondary-dark": "#a1a1a6",
+          },
+          fontFamily: {
+            display: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            "2xl": "20px",
+            "3xl": "30px",
+          }
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(24px); }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu.open { max-height: 600px; opacity: 1; }
+    .benefit-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(51,30,72,0.1); }
+  </style>
 </head>
 
-<body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
-    <nav
-        class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-14">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <span
-                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</span>
-                    <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
-                </a>
-                <div class="hidden md:flex space-x-8">
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="services.html">Services</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="locations.html">Find a Store</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="about.html">About Us</a>
-                    <a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary"
-                        href="franchise.html">Franchise</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="resources.html">Resources</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="faq.html">FAQ</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="contact.html">Contact</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop</a></div>
-                <div class="flex items-center space-x-4">
-                    <button class="text-text-light dark:text-text-dark hover:text-primary p-1">
-                        <span class="material-icons-outlined text-lg">search</span>
-                    </button>
-                    <a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all"
-                        href="book-repair.html">Book Repair</a>
-                </div>
-            </div>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-xl border-b border-gray-200/60 dark:border-gray-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex-shrink-0 flex items-center gap-2.5 hover:opacity-90 transition-opacity">
+          <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-sm">NN</div>
+          <span class="font-bold text-lg tracking-tight">Near Nerd</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-7">
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="services.html">Services</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="locations.html">Find a Store</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="about.html">About</a>
+          <a class="text-[11px] font-bold tracking-widest text-primary border-b-2 border-primary uppercase" href="franchise.html">Franchise</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="resources.html">Resources</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="faq.html">FAQ</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="contact.html">Contact</a>
+          <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop</a>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="py-24 bg-primary text-white pb-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
-            <h3 class="text-xs font-bold uppercase tracking-[0.4em] mb-6 opacity-80 text-accent">Franchising</h3>
-            <h1
-                class="text-5xl md:text-7xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-                Own a Technology Hub.</h1>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Partner with the fastest-growing technology service brand. Leverage our proven business model, global
-                supply chain, and intensive training programs to build your business.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a class="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg"
-                    href="#apply">Apply Now</a>
-                <a class="bg-transparent border border-white/40 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors"
-                    href="#">Download Prospectus</a>
-            </div>
+        <div class="flex items-center gap-3">
+          <a class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all shadow-sm" href="book-repair.html">Book Repair</a>
+          <button id="menu-btn" type="button" class="md:hidden p-2 text-text-light dark:text-text-dark" aria-label="Open menu">
+            <span class="material-icons-outlined">menu</span>
+          </button>
         </div>
-    </section>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+      <div class="px-4 py-4 space-y-3">
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="services.html">Services</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="locations.html">Find a Store</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="about.html">About</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800 text-primary" href="franchise.html">Franchise</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="resources.html">Resources</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="faq.html">FAQ</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="contact.html">Contact</a>
+        <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop ↗</a>
+        <a class="block w-full text-center bg-primary text-white font-bold py-3 rounded-full mt-2" href="book-repair.html">Book a Repair</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Stats/Features -->
-    <section class="py-12 -mt-16 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in-up delay-100">
-                <div
-                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
-                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">4-6 wks</div>
-                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Launch Timeline</h4>
-                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">From signing to grand
-                        opening, our expansion team handles real estate matching and store build-outs rapidly.</p>
-                </div>
-                <div
-                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
-                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">3 Weeks</div>
-                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Corporate Training</h4>
-                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Intensive training at
-                        corporate HQ covering operations, marketing, and technical repair certification.</p>
-                </div>
-                <div
-                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
-                    <div class="text-4xl font-bold text-primary dark:text-purple-400 mb-2">Full</div>
-                    <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-gray-500">Marketing Pack</h4>
-                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">National campaigns, local
-                        SEO optimization, and social media content strategies included.</p>
-                </div>
-            </div>
+  <!-- Hero -->
+  <section class="relative overflow-hidden min-h-[85vh] flex items-center bg-black">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1800&q=80" alt="Franchise opportunity" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-black/60"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl fade-in-up">
+        <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-1.5 mb-8">
+          <span class="w-2 h-2 bg-accent rounded-full"></span>
+          <span class="text-accent text-xs font-bold uppercase tracking-widest">Franchising</span>
         </div>
-    </section>
-
-    <!-- Application Form -->
-    <section id="apply" class="py-24 bg-background-light dark:bg-background-dark">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-up delay-200">
-            <div
-                class="bg-surface-light dark:bg-surface-dark rounded-[40px] p-8 md:p-16 shadow-lg border border-gray-100 dark:border-gray-800">
-                <h2 class="text-3xl font-bold mb-2">Initial Application</h2>
-                <p class="text-text-secondary-light dark:text-text-secondary-dark mb-10">We are looking for partners
-                    committed to quality, with strong communication skills and a passion for technology. Submit your
-                    details to begin.</p>
-
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="first_name" class="block text-sm font-medium mb-2">First Name</label>
-                            <input id="first_name" type="text" placeholder="John"
-                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
-                        </div>
-                        <div>
-                            <label for="last_name" class="block text-sm font-medium mb-2">Last Name</label>
-                            <input id="last_name" type="text" placeholder="Doe"
-                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                            <input id="email" type="email" placeholder="john@example.com"
-                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
-                            <input id="phone" type="tel" placeholder="(555) 000-0000"
-                                class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="territory" class="block text-sm font-medium mb-2">Desired Territory (City,
-                            State/Province)</label>
-                        <input id="territory" type="text" placeholder="Edmonton, AB"
-                            class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
-                    </div>
-
-                    <div>
-                        <label for="capital" class="block text-sm font-medium mb-2">Liquid Capital Available</label>
-                        <select id="capital" title="Select liquid capital range"
-                            class="w-full bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all appearance-none">
-                            <option>Select an option...</option>
-                            <option>$50,000 - $100,000</option>
-                            <option>$100,000 - $250,000</option>
-                            <option>$250,000 - $500,000</option>
-                            <option>$500,000+</option>
-                        </select>
-                    </div>
-
-                    <div class="pt-4">
-                        <button type="button"
-                            class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-opacity-90 transition-all shadow-md">Submit
-                            Application</button>
-                        <p class="text-center text-xs text-gray-500 mt-4">By submitting, you agree to our Privacy Policy
-                            and acknowledge this is not a binding contract.</p>
-                    </div>
-                </form>
-            </div>
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-extrabold text-white tracking-tighter leading-[0.9] mb-6">
+          Own a<br/>Technology<br/>Hub.
+        </h1>
+        <p class="text-xl text-white/70 max-w-2xl mb-10 leading-relaxed">
+          Partner with Canada's fastest-growing technology service brand. Leverage our proven business model, national supply chain, and intensive training programs to build your future.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a class="inline-flex items-center justify-center gap-2 bg-accent text-primary px-8 py-4 rounded-full font-bold text-sm hover:bg-yellow-300 transition-all shadow-lg" href="#apply">
+            Apply Now <span class="material-icons-outlined text-sm">arrow_forward</span>
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white px-8 py-4 rounded-full font-bold text-sm hover:bg-white/20 transition-all" href="resources.html">
+            Download Prospectus
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer
-        class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-                <div class="col-span-2 lg:col-span-1">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div
-                            class="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white font-bold text-[10px]">
-                            NN</div>
-                        <span class="font-semibold text-text-light dark:text-white">Near Nerd</span>
-                    </div>
-                    <p class="mb-4">Your trusted neighborhood destination for mobile device repairs and comprehensive
-                        technology solutions.</p>
-                    <div class="flex space-x-4">
-                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
-                                class="material-icons-outlined text-lg">facebook</span></a>
-                        <a class="hover:text-primary dark:hover:text-white transition-colors" href="#"><span
-                                class="material-icons-outlined text-lg">camera_alt</span></a>
-                        <a class="hover:text-primary dark:hover:text-white transition-colors"
-                            href="mailto:support@nearnerd.com"><span
-                                class="material-icons-outlined text-lg">alternate_email</span></a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
-                        Services</h3>
-                    <ul class="space-y-2">
-                        <li><a class="hover:underline" href="services.html">Smartphone Repair</a></li>
-                        <li><a class="hover:underline" href="services.html">Tablet Repair</a></li>
-                        <li><a class="hover:underline" href="services.html">Laptop &amp; Computer</a></li>
-                        <li><a class="hover:underline" href="services.html">Data Recovery</a></li>
-                        <li><a class="hover:underline" href="services.html">Business IT</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
-                        Company</h3>
-                    <ul class="space-y-2">
-                        <li><a class="hover:underline" href="about.html">About Us</a></li>
-                        <li><a class="hover:underline" href="about.html">Careers</a></li>
-                        <li><a class="hover:underline" href="locations.html">Locations</a></li>
-                        <li><a class="hover:underline" href="contact.html">Contact</a></li>
-                        <li><a class="hover:underline" href="index.html">Reviews</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
-                        Support</h3>
-                    <ul class="space-y-2">
-                        <li><a class="hover:underline" href="contact.html">Check Repair Status</a></li>
-                        <li><a class="hover:underline" href="faq.html">Warranty Policy</a></li>
-                        <li><a class="hover:underline" href="faq.html">Privacy Policy</a></li>
-                        <li><a class="hover:underline" href="faq.html">Terms of Service</a></li>
-                        <li><a class="hover:underline" href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-span-2 md:col-span-4 lg:col-span-1">
-                    <h3 class="font-semibold text-text-light dark:text-white mb-3 tracking-tighter">
-                        Newsletter</h3>
-                    <p class="mb-3">Get the latest tech tips and exclusive repair deals.</p>
-                    <form class="flex gap-2">
-                        <input
-                            class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary outline-none"
-                            placeholder="Email address" type="email" />
-                        <button class="bg-primary text-white p-2 rounded-lg hover:bg-opacity-90" type="button">
-                            <span class="material-icons-outlined text-sm">arrow_forward</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div
-                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>Copyright © 2025 Near Nerd. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <a class="hover:underline" href="faq.html">Privacy Policy</a>
-                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
-                    <a class="hover:underline" href="faq.html">Terms of Use</a>
-                    <span class="border-l border-gray-300 dark:border-gray-700"></span>
-                    <a class="hover:underline" href="#">Site Map</a>
-                </div>
-                <div class="text-[10px] text-gray-400">
-                    Canada (English)
-                </div>
-            </div>
+  <!-- Floating Stats Cards -->
+  <section class="py-8 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-16 relative z-10 fade-in-up delay-100">
+        <div class="benefit-card bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+          <div class="text-4xl font-extrabold text-primary dark:text-purple-400 mb-2">4–6 wks</div>
+          <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-text-secondary-light dark:text-text-secondary-dark">Launch Timeline</h4>
+          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">From signing to grand opening — our expansion team handles real estate matching and build-outs rapidly.</p>
         </div>
-    </footer>
+        <div class="benefit-card bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+          <div class="text-4xl font-extrabold text-primary dark:text-purple-400 mb-2">3 Weeks</div>
+          <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-text-secondary-light dark:text-text-secondary-dark">Corporate Training</h4>
+          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Intensive training at corporate HQ covering operations, marketing, and technical repair certification.</p>
+        </div>
+        <div class="benefit-card bg-surface-light dark:bg-surface-dark p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800">
+          <div class="text-4xl font-extrabold text-primary dark:text-purple-400 mb-2">Full</div>
+          <h4 class="font-bold text-sm uppercase tracking-wider mb-2 text-text-secondary-light dark:text-text-secondary-dark">Marketing Pack</h4>
+          <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">National campaigns, local SEO, and social media content strategies — all included from day one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Near Nerd -->
+  <section class="py-24 bg-background-light dark:bg-background-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.3em] text-primary dark:text-purple-400 mb-4">Why Us</p>
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8 leading-tight">Everything you need<br/>to succeed.</h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-icons-outlined text-white text-xl">inventory_2</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">National Supply Chain</h3>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">Access to premium parts inventory at wholesale pricing through our established supplier network.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-icons-outlined text-primary text-xl">support_agent</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Dedicated Franchise Support</h3>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">A dedicated franchise consultant is assigned to your location for the first 90 days and beyond.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-icons-outlined text-white text-xl">trending_up</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Proven Revenue Model</h3>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">Multiple revenue streams: repairs, Bell telecom, accessories, business IT, and in-store services.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-icons-outlined text-white text-xl">verified</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Brand with Authority</h3>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">An authorized Bell dealer with a 5.0 Google rating and a community-trusted reputation already built.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-[32px] overflow-hidden aspect-[4/3] shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Franchise team" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 text-white">
+            <div class="text-2xl font-extrabold mb-0.5">10+</div>
+            <div class="text-sm text-white/70">Locations open or opening soon across Canada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section id="apply" class="py-24 bg-surface-light dark:bg-surface-dark">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-in-up">
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-primary dark:text-purple-400 mb-3">Get Started</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4">Initial Application.</h2>
+        <p class="text-text-secondary-light dark:text-text-secondary-dark max-w-xl mx-auto">We're looking for partners committed to quality, with strong communication skills and a passion for technology. Submit your details to begin the conversation.</p>
+      </div>
+
+      <div class="bg-background-light dark:bg-background-dark rounded-[32px] p-8 md:p-12 shadow-lg border border-gray-100 dark:border-gray-800 fade-in-up delay-100">
+        <form class="space-y-6" novalidate>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="first_name" class="block text-sm font-semibold mb-2">First Name <span class="text-red-500">*</span></label>
+              <input id="first_name" type="text" placeholder="John" required
+                class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all" />
+            </div>
+            <div>
+              <label for="last_name" class="block text-sm font-semibold mb-2">Last Name <span class="text-red-500">*</span></label>
+              <input id="last_name" type="text" placeholder="Doe" required
+                class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2">Email <span class="text-red-500">*</span></label>
+              <input id="email" type="email" placeholder="john@example.com" required
+                class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2">Phone Number <span class="text-red-500">*</span></label>
+              <input id="phone" type="tel" placeholder="(555) 000-0000" required
+                class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all" />
+            </div>
+          </div>
+          <div>
+            <label for="territory" class="block text-sm font-semibold mb-2">Desired Territory (City, Province) <span class="text-red-500">*</span></label>
+            <input id="territory" type="text" placeholder="Edmonton, AB" required
+              class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all" />
+          </div>
+          <div>
+            <label for="capital" class="block text-sm font-semibold mb-2">Liquid Capital Available <span class="text-red-500">*</span></label>
+            <select id="capital" title="Select liquid capital range" required
+              class="w-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary outline-none transition-all appearance-none cursor-pointer">
+              <option value="">Select an option...</option>
+              <option>$50,000 – $100,000</option>
+              <option>$100,000 – $250,000</option>
+              <option>$250,000 – $500,000</option>
+              <option>$500,000+</option>
+            </select>
+          </div>
+          <div class="flex items-start gap-3">
+            <input id="privacy" type="checkbox" class="mt-0.5 rounded border-gray-300 text-primary focus:ring-primary cursor-pointer" />
+            <label for="privacy" class="text-xs text-text-secondary-light dark:text-text-secondary-dark leading-relaxed cursor-pointer">
+              I agree to the <a href="faq.html" class="text-primary dark:text-purple-400 underline">Privacy Policy</a>. I acknowledge this submission is not a binding contract.
+            </label>
+          </div>
+          <button type="submit"
+            class="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-primary/90 transition-all shadow-md text-sm tracking-wide">
+            Submit Application
+          </button>
+          <p class="text-center text-xs text-text-secondary-light dark:text-text-secondary-dark">Our franchise team will reach out within 2 business days.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 text-xs text-text-secondary-light dark:text-text-secondary-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div class="col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-[11px]">NN</div>
+            <span class="font-bold text-base text-text-light dark:text-white">Near Nerd</span>
+          </div>
+          <p class="mb-4 leading-relaxed">Your trusted neighborhood destination for mobile device repairs and comprehensive technology solutions.</p>
+          <div class="flex space-x-3">
+            <a class="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#" aria-label="Facebook"><span class="material-icons-outlined text-base">facebook</span></a>
+            <a class="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#" aria-label="Instagram"><span class="material-icons-outlined text-base">camera_alt</span></a>
+            <a class="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="mailto:support@nearnerd.com" aria-label="Email"><span class="material-icons-outlined text-base">alternate_email</span></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-text-light dark:text-white mb-3">Services</h3>
+          <ul class="space-y-2.5">
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="services.html">Smartphone Repair</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="services.html">Tablet Repair</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="services.html">Laptop &amp; Computer</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="services.html">Data Recovery</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="services.html">Business IT</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-text-light dark:text-white mb-3">Company</h3>
+          <ul class="space-y-2.5">
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="about.html">About Us</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="careers.html">Careers</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="locations.html">Locations</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="contact.html">Contact</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="franchise.html">Franchise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-text-light dark:text-white mb-3">Support</h3>
+          <ul class="space-y-2.5">
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="book-repair.html">Book a Repair</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="faq.html">Warranty Policy</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="faq.html">FAQ</a></li>
+            <li><a class="hover:text-primary dark:hover:text-white transition-colors" href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-4 lg:col-span-1">
+          <h3 class="font-bold text-text-light dark:text-white mb-3">Newsletter</h3>
+          <p class="mb-3 leading-relaxed">Get the latest tech tips and exclusive repair deals.</p>
+          <form class="flex gap-2">
+            <input class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-primary outline-none text-xs" placeholder="Email address" type="email" />
+            <button class="bg-primary text-white p-2.5 rounded-xl hover:bg-primary/90 flex-shrink-0" type="button" aria-label="Subscribe">
+              <span class="material-icons-outlined text-sm">arrow_forward</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>Copyright &copy; 2025 Near Nerd. All rights reserved.</p>
+        <div class="flex gap-4 items-center">
+          <a class="hover:text-primary dark:hover:text-white transition-colors" href="faq.html">Privacy Policy</a>
+          <span class="border-l border-gray-300 dark:border-gray-700 h-3"></span>
+          <a class="hover:text-primary dark:hover:text-white transition-colors" href="faq.html">Terms of Use</a>
+        </div>
+        <div class="text-[10px] text-gray-400">Canada (English)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.material-icons-outlined');
+      icon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
+    });
+  </script>
 </body>
 
 </html>

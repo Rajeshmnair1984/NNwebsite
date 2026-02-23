@@ -35,70 +35,60 @@
             },
         };
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .delay-100 {
-            animation-delay: 0.1s;
-        }
-
-        .delay-200 {
-            animation-delay: 0.2s;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(24px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 600px; opacity: 1; }
+        @supports (scrollbar-width: none) { .hide-scroll { scrollbar-width: none; } }
+        @supports not (scrollbar-width: none) { .hide-scroll { -ms-overflow-style: none; } .hide-scroll::-webkit-scrollbar { display: none; } }
+        .loc-map-frame { border: 0; display: block; }
     </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased transition-colors duration-300">
-    <nav
-        class="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav class="sticky top-0 z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-xl border-b border-gray-200/60 dark:border-gray-800/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-14">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <span
-                        class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">NN</span>
-                    <span class="font-semibold text-lg tracking-tight">Near Nerd</span>
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2.5 hover:opacity-90 transition-opacity">
+                    <div class="w-9 h-9 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-sm">NN</div>
+                    <span class="font-bold text-lg tracking-tight">Near Nerd</span>
                 </a>
-                <div class="hidden md:flex space-x-8">
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="services.html">Services</a>
-                    <a class="text-[11px] font-bold tracking-widest text-primary hover:text-primary transition-colors uppercase border-b-2 border-primary"
-                        href="locations.html">Find a Store</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="about.html">About Us</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="franchise.html">Franchise</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="resources.html">Resources</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="faq.html">FAQ</a>
-                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase"
-                        href="contact.html">Contact</a><a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop</a></div>
-                <div class="flex items-center space-x-4">
-                    <button class="text-text-light dark:text-text-dark hover:text-primary p-1">
-                        <span class="material-icons-outlined text-lg">search</span>
-                    </button>
-                    <a class="bg-primary hover:bg-opacity-90 text-white text-xs px-3 py-1.5 rounded-full transition-all"
-                        href="book-repair.html">Book Repair</a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="services.html">Services</a>
+                    <a class="text-[11px] font-bold tracking-widest text-primary border-b-2 border-primary uppercase" href="locations.html">Find a Store</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="about.html">About</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="franchise.html">Franchise</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="resources.html">Resources</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="faq.html">FAQ</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="contact.html">Contact</a>
+                    <a class="text-[11px] font-bold tracking-widest text-text-light dark:text-text-dark hover:text-primary transition-colors uppercase" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop</a>
                 </div>
+                <div class="flex items-center gap-3">
+                    <a class="bg-primary hover:bg-primary/90 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all shadow-sm" href="book-repair.html">Book Repair</a>
+                    <button id="menu-btn" type="button" class="md:hidden p-2 text-text-light dark:text-text-dark" aria-label="Open menu">
+                        <span class="material-icons-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800">
+            <div class="px-4 py-4 space-y-3">
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="services.html">Services</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800 text-primary" href="locations.html">Find a Store</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="about.html">About</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="franchise.html">Franchise</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="resources.html">Resources</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="faq.html">FAQ</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="contact.html">Contact</a>
+                <a class="block text-sm font-semibold py-2 border-b border-gray-100 dark:border-gray-800" href="https://shop.nearnerd.com" target="_blank" rel="noopener noreferrer">Shop ↗</a>
+                <a class="block w-full text-center bg-primary text-white font-bold py-3 rounded-full mt-2" href="book-repair.html">Book a Repair</a>
             </div>
         </div>
     </nav>
@@ -164,11 +154,10 @@
                             <span
                                 class="text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-1 rounded-full font-medium">Live</span>
                         </div>
-                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4">1227 91 St
-                            SW<br>Edmonton, AB T6X 1E9<br>Canada</p>
+                        <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4">Unit 124, Riverview Mall<br>3210 118 Ave NW<br>Edmonton, AB T5W 4W1</p>
                         <p class="text-sm font-medium mb-6">(780) 242-0095</p>
                         <div class="flex gap-3">
-                            <a href="https://www.google.com/maps?q=1227%2091%20St%20SW%2C%20Edmonton%2C%20AB%20T6X%201E9%2C%20Canada"
+                            <a href="https://www.google.com/maps?q=3210%20118%20Ave%20NW%2C%20Edmonton%2C%20AB%20T5W%204W1"
                                 target="_blank" rel="noopener noreferrer"
                                 class="flex-1 border border-primary text-primary dark:border-purple-400 dark:text-purple-400 text-center py-2 rounded-xl text-sm font-medium hover:bg-primary/5 transition-colors">Directions</a>
                             <a href="book-repair.html"
@@ -436,9 +425,8 @@
                     <iframe
                         title="Near Nerd locations map for Alberta and Yukon"
                         src="https://www.google.com/maps?q=Alberta%20Yukon%20Canada&amp;output=embed"
-                        class="w-full h-full border-0"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        class="loc-map-frame w-full h-full"
+                        loading="lazy"></iframe>
                     <div class="absolute bottom-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-4 py-2 rounded-lg text-xs font-medium shadow-sm">
                         Alberta + Yukon Service Region
                     </div>
@@ -536,6 +524,15 @@
             </div>
         </div>
     </footer>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const icon = menuBtn.querySelector('.material-icons-outlined');
+      icon.textContent = mobileMenu.classList.contains('open') ? 'close' : 'menu';
+    });
+  </script>
 </body>
 
 </html>
